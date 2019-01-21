@@ -10,7 +10,7 @@
     'depends':['sale_expense','sale_payment','base_setup'],
     'data':[
         "view/res_config_settings.xml",
-        "view/view_res_partner.xml",
+        #"view/view_res_partner.xml",
 
         "data/res_partner_data.xml",
         "data/subtype_res_partner.xml",
