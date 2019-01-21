@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='left_column_title']" position="attributes">
                     <attribute name="widget">field_autocomplete_text</attribute>
+
                     <attribute name="options">{'model':'funnel.cms'}</attribute>
                 </xpath>
             </field>

@@ -10,9 +10,10 @@
                     <attribute name="widget">field_autocomplete_text</attribute>
                     <attribute name="options">{'model':'funnel.cms'}</attribute>
                 </xpath>
+
                 <xpath expr="//field[@name='display_price']" position="attributes">
                     <attribute name="widget">field_autocomplete_text</attribute>
-                    <attribute name="options">{'model':'funnel.cms'}</attribute>
+                    <attribute name="options">{'model':'res.partner'}</attribute>
                 </xpath>
             </field>
         </record>
