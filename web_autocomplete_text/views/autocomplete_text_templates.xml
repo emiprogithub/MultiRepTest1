@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="Web Clearbit Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/web_autocomplete_text/static/src/less/autocomplete_text.less" />
+            <script type="text/javascript" src="/web_autocomplete_text/static/src/js/autocomplete_text.js" />
+        </xpath>
+    </template>
+</odoo>
