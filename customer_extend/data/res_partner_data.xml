@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="default_website_partner" model="res.partner">
+            <field name="name">Default Website Partner</field>
+            <field name="company_id" eval="None"/>
+            <field name="customer" eval="True"/>
+            <field name="is_company" eval="False"/>
+            <field name="active" eval="True"/>
+            <field name="street"/>
+            <field name="city"/>
+            <field name="zip"/>
+            <field name="phone"/>
+            <field name="email"/>
+            <field name="website"/>
+        </record>
+    </data>
+</odoo>

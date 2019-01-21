@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_res_partner_a4d_customer_extend" model="ir.ui.view">
+            <field name="name">view.res.partner.a4d.customer.extend</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="store"/>
+                    <field name="create_from_script" invisible="1"/> <!--Added by Arjun Bhoot -->
+                </field>
+            </field>
+        </record>
+        <record id="contacts.action_contacts_view_kanban" model="ir.actions.act_window.view">
+	        <field name="sequence" eval="1"/>
+	        <field name="view_mode">kanban</field>
+	        <field name="view_id" ref="base.res_partner_kanban_view"/>
+	        <field name="act_window_id" ref="contacts.action_contacts"/>
+	    </record>
+	    <record id="contacts.action_contacts_view_tree" model="ir.actions.act_window.view">
+	        <field name="sequence" eval="0"/>
+	        <field name="view_mode">tree</field>
+	        <field name="view_id" ref="base.view_partner_tree"/>
+	        <field name="act_window_id" ref="contacts.action_contacts"/>
+	    </record>
+        <record id="view_search_res_partner_inherited" model="ir.ui.view">
+            <field name="name">view.search.res.partner.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="store"/>
+                </field>
+                <xpath expr="//group" position="inside">
+                    <filter name="a4d_group_by_store" string="Store" domain="[]" context="{'group_by':'store'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

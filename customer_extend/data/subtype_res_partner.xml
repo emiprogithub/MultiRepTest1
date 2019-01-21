@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="mail.message.subtype" id="change_logged_action">
+            <field name="name">Logged change action</field>
+            <field name="description">Partner Detail Updated</field>
+            <field name="res_model">res.partner</field>
+            <field name="internal" eval="True"/>
+        </record>
+    </data>
+</odoo>
