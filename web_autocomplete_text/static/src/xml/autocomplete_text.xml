@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <ul t-name="web_autocomplete_text.dropdown" class="o_autocomplete_dropdown dropdown-menu">
+        <li t-foreach="suggestions" t-as="name">
+            <a href="#"
+                t-attf-class="o_autocomplete_suggestion clearfix#{info_index == 0 and ' active' or ''}"
+                t-att-data-index="name_index">
+                <div class="o_autocomplete_info">
+                    <strong><t t-esc="name or '&#160;'"/></strong>
+                </div>
+            </a>
+        </li>
+    </ul>
+</templates>

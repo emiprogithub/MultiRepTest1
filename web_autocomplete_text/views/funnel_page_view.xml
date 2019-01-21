@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="funnel_page_view_form" model="ir.ui.view">
+            <field name="name">funnel.page.inherit.form</field>
+            <field name="model">funnel.page</field>
+            <field name="inherit_id" ref="funnels_management.view_funnel_page_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='left_column_title']" position="attributes">
+                    <attribute name="widget">field_autocomplete_text</attribute>
+                    <attribute name="options">{'model':'funnel.cms'}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="funnel_template_view_form" model="ir.ui.view">
+            <field name="name">funnel.template.inherit.form</field>
+            <field name="model">funnel.template</field>
+            <field name="inherit_id" ref="funnel_template.template_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_name']" position="attributes">
+                    <attribute name="widget">field_autocomplete_text</attribute>
+                    <attribute name="options">{'model':'funnel.cms'}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='display_price']" position="attributes">
+                    <attribute name="widget">field_autocomplete_text</attribute>
+                    <attribute name="options">{'model':'funnel.cms'}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
